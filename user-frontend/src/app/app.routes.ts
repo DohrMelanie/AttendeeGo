@@ -22,6 +22,6 @@ export const routes: Routes = [
   { path: 'info', component: InfoComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'friends', component: FriendsComponent },
-  { path: 'find-friends', component: FindFriendsComponent }
+  { path: 'find-friends', component: FindFriendsComponent },
   { path: 'timetable', component: TimetableComponent }
 ];

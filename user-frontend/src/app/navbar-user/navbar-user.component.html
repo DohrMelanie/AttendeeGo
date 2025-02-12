@@ -1,27 +1,27 @@
 <nav class="bg-secondary-200 flex justify-around items-center p-1 text-black">
   <div class="flex flex-col items-center" (click)="navigateTo('user-start')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'user-start'}">
+    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'user-start'}">
       <span class="material-icons text-sm">music_note</span>
     </div>
     <span class="text-xs">Artists</span>
   </div>
 
   <div class="flex flex-col items-center" (click)="navigateTo('find-friends')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'find-friends'}">
+    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'find-friends'}">
       <span class="material-icons text-sm">search</span>
     </div>
     <span class="text-xs">Meet</span>
   </div>
 
   <div class="flex flex-col items-center" (click)="navigateTo('friends')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'friends'}">
+    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'friends'}">
       <span class="material-icons text-sm">person_add</span>
     </div>
     <span class="text-xs">Friends</span>
   </div>
 
   <div class="flex flex-col items-center" (click)="navigateTo('settings')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'settings'}">
+    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'settings'}">
       <span class="material-icons text-sm">settings</span>
     </div>
     <span class="text-xs">Settings</span>

@@ -1,1 +1,23 @@
-<p>user-start works!</p>
+<div class="p-4 bg-background-50 min-h-screen">
+  <input
+    type="text"
+    placeholder="Find Artists ..."
+    class="w-full p-2 mb-4 rounded-lg bg-background-950 text-sm"
+  />
+   @for (artist of artists; track $index) {
+    <div class="flex items-center justify-between bg-secondary-400 p-2 rounded-lg mb-3">
+      <div class="flex items-center space-x-2">
+        <img [src]="artist.image" class="h-12 w-12 rounded-xl object-contain" alt="Artist Logo">
+        <span class="text-black text-sm">{{ artist.name }}</span>
+      </div>
+      <button (click)="toggleFavorite(artist)">
+        <span class="material-icons text-sm">
+          {{ artist.favorite ? 'favorite' : 'favorite_border' }}
+        </span>
+      </button>
+    </div>
+   }
+   <div class="mt-20"></div>
+</div>
+
+<app-navbar-user class="fixed bottom-0 w-full"></app-navbar-user>
