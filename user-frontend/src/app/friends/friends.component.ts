@@ -14,7 +14,6 @@ export class FriendsComponent {
     { name: 'Liam', accepted: false },
   ]);
 
-  // Example message list
   messages = signal([
     { name: 'Hannah', message: 'Ja das wird hoffentlich so funktionieren', date: '03.02.25', avatar: 'friends/nopic.png' },
     { name: 'Tommy', message: 'laut ihm war das letztes Jahr ein Problem', date: '23.01.25', avatar: 'friends/girl1.png' },

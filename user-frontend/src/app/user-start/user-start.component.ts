@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-start',
@@ -9,6 +10,7 @@ import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
   styleUrl: './user-start.component.css'
 })
 export class UserStartComponent {
+  protected router = inject(Router);
   artists = [
     { name: "Led Zeppelin", image: "artists/LedZeppelin.png", favorite: true },
     { name: "AC / DC", image: "artists/acdc.png", favorite: false },
@@ -22,5 +24,9 @@ export class UserStartComponent {
 
   toggleFavorite(artist: any) {
     artist.favorite = !artist.favorite;
+  }
+
+  back() {
+    this.router.navigate(['/']);
   }
 }
