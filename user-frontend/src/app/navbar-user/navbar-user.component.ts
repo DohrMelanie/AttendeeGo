@@ -10,14 +10,12 @@ import { Router } from '@angular/router';
   styleUrl: './navbar-user.component.css'
 })
 export class NavbarUserComponent {
-  activeTab = signal<string>('home');
+  activeTab = signal<string>(localStorage.getItem('activeTab') || 'start-festival');
   protected router = inject(Router);
-  @Input({ required: true }) mode!: string;
-
-  constructor() {}
 
   navigateTo(path: string) {
     this.activeTab.set(path);
+    localStorage.setItem('activeTab', path);
     this.router.navigate(['/' + path]);
   }
 }
