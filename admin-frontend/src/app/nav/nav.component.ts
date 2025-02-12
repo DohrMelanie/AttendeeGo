@@ -1,14 +1,12 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
   imports: [
-    MatIconModule, MatButtonModule, MatCardModule
+    MatIconModule
   ],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css'],
