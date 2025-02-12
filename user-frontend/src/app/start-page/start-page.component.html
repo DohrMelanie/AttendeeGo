@@ -1,5 +1,6 @@
-<img src="slogan.png" alt="Slogan image" class="w-full">
-<h1 class="text-foreground-500">Welcome to AttendeeGo</h1>
-
-<button [routerLink]="">Select Festival</button>
-<button>Connect</button>
+<div class="flex flex-col items-center">
+  <img src="slogan.png" alt="Slogan image" class="w-full">
+  <h1 class="text-foreground-800 m-2 mt-6">Welcome to AttendeeGo</h1>
+  <button [routerLink]="'/festival-start'" class="m-3 bg-background-800 text-white p-4 rounded-xl">Select Festival</button>
+  <button [routerLink]="'/user-start'" class="m-3 bg-background-800 text-white p-4 rounded-xl">Connect</button>
+</div>
