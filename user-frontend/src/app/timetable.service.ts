@@ -8,8 +8,9 @@ export type Act = {
 
 export type Day = {
   id: string;
-  label: string;
-  date: string;
+  month: string;
+  day: string;
+  weekday: string;
   active: boolean;
 };
 
@@ -27,7 +28,7 @@ export class TimetableService {
       { name: 'Whitechapel', beginTime: new Date('2023-10-01T16:00:00'), endTime: new Date('2023-10-01T16:30:00') },
       { name: 'Ghostkid', beginTime: new Date('2023-10-01T17:00:00'), endTime: new Date('2023-10-01T19:00:00') },
       { name: 'Within Destruction', beginTime: new Date('2023-10-01T20:30:00'), endTime: new Date('2023-10-01T22:00:00') },
-      { name: 'Shadow of Intent', beginTime: new Date('2023-10-01T22:30:00'), endTime: new Date('2023-10-01T24:00:00') }
+      { name: 'Shadow of Intent', beginTime: new Date('2023-10-01T22:30:00'), endTime: new Date('2023-10-01T23:30:00') }
     ];
     } else if(stage === 'Stage 2') {
     return [
