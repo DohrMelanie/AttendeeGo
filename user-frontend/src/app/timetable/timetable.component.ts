@@ -1,14 +1,23 @@
 import { Component, signal } from '@angular/core';
+<<<<<<< HEAD
 import { TimetableService, Act, Day } from '../timetable.service';
 
+=======
+import { NavbarFestivalComponent } from '../navbar-festival/navbar-festival.component';
+>>>>>>> refs/remotes/origin/main
 
 @Component({
   selector: 'app-timetable',
   standalone: true,
+<<<<<<< HEAD
+=======
+  imports: [NavbarFestivalComponent],
+>>>>>>> refs/remotes/origin/main
   templateUrl: './timetable.component.html',
   styleUrls: ['./timetable.component.css']
 })
 export class TimetableComponent {
+<<<<<<< HEAD
   constructor(private timetableService: TimetableService) {}
 
   stages = signal<string[]>(['Stage 1', 'Stage 2', 'Stage 3']);
@@ -45,4 +54,6 @@ export class TimetableComponent {
     this.days.forEach((day) => (day.active = day.id === id));
   }
     
+=======
+>>>>>>> refs/remotes/origin/main
 }

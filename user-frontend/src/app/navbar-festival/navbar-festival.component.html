@@ -1,28 +1,35 @@
 <nav class="bg-primary-200 flex justify-around items-center p-1 text-black">
-  <div class="flex flex-col items-center" (click)="navigateTo('festival-start')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'festival-start'}">
-      <span class="material-icons text-sm">home</span>
-    </div>
-    <span class="text-xs">Home</span>
+  <div class="relative flex flex-col items-center cursor-pointer" (click)="navigateTo('festival-start')">
+    @if (activeTab() === 'festival-start') {
+      <div class="absolute inset-0 bg-secondary-200 rounded-full"></div>
+    }
+    <span class="material-icons text-lg relative">home</span>
+    <span class="text-xs relative">Home</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('map')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'map'}">
-      <span class="material-icons text-sm">map</span>
-    </div>
-    <span class="text-xs">Map</span>
+
+  <div class="relative flex flex-col items-center cursor-pointer" (click)="navigateTo('map')">
+    @if (activeTab() === 'map') {
+      <div class="absolute inset-0 bg-secondary-200 rounded-full"></div>
+    }
+    <span class="material-icons text-lg relative">map</span>
+    <span class="text-xs relative">Map</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('timetable')"> <!--TODO-->
-    <span class="material-icons text-sm">event</span>
-    <span class="text-xs">Timetable</span>
+  <div class="relative flex flex-col items-center cursor-pointer" (click)="navigateTo('timetable')">
+    @if (activeTab() === 'timetable') {
+      <div class="absolute inset-0 bg-secondary-200 rounded-full"></div>
+    }
+    <span class="material-icons text-lg relative">event</span>
+    <span class="text-xs relative">Timetable</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('info')">
-    <div [ngClass]="{'bg-pink-600 rounded-full': activeTab() === 'info'}">
-      <span class="material-icons text-sm">more_horiz</span>
-    </div>
-    <span class="text-xs">Info</span>
+  <div class="relative flex flex-col items-center cursor-pointer" (click)="navigateTo('info')">
+    @if (activeTab() === 'info') {
+      <div class="absolute inset-0 bg-secondary-200 rounded-full"></div>
+    }
+    <span class="material-icons text-lg relative">more_horiz</span>
+    <span class="text-xs relative">Info</span>
   </div>
 </nav>
 

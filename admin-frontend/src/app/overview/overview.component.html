@@ -1,0 +1,5 @@
+<div class="flex flex-row flex-wrap max-w-[90svw] justify-evenly items-center">
+    @for (festival of festivals; track $index) {
+        <app-festival-card [festival]="[festival]" />
+    }
+</div>
