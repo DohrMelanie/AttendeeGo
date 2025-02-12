@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 class="text-center my-3">Festival Timetable</h2>
+  
+    <!-- Date Selector -->
+    <div class="d-flex justify-content-center mb-3">
+    </div>
+  
+    <!-- Timetable -->
+    <div class="table-responsive">
+      <table class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Time</th>
+            @for (stage of stages(); track stage) {
+              <th>{{ stage.name }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+      </table>
+    </div>
+  </div>
