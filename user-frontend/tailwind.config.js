@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        text: {
+        foreground: {
           50: 'var(--text-50)',
           100: 'var(--text-100)',
           200: 'var(--text-200)',
