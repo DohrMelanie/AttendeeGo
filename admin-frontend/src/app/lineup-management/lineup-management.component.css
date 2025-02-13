@@ -5,3 +5,32 @@
 .map-expansion-panel-header{
     @apply bg-primary-700 text-foreground-600;
 }
+
+
+.timetable-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: sans-serif;
+}
+
+.timetable-header {
+  background-color: #f8f9fa;
+}
+
+.background-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.events-overlay {
+  z-index: 2;
+}
+
+.event {
+  /* Ensure events stand out above background cells */
+  overflow: hidden;
+  /* Optionally add rounded corners, shadow, etc. */
+  border-radius: 4px;
+}
+
+
