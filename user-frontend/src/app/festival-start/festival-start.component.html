@@ -2,4 +2,21 @@
   <span class="material-icons text-2xl">undo</span>
 </button>
 
+<div class="p-4">
+  <h1 class="text-2xl font-bold">Artists</h1>
+  <div class="mt-4 space-y-4">
+    @for (artist of artists; track $index) {
+      <div class="relative rounded-lg overflow-hidden">
+        <img [src]="artist.image" class="w-full h-40 object-cover">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <span class="text-white font-semibold">{{ artist.name }}</span>
+        </div>
+        <button class="absolute top-2 right-2 text-white">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+    }
+  </div>
+</div>
+
 <app-navbar-festival class="fixed bottom-0 w-full"></app-navbar-festival>

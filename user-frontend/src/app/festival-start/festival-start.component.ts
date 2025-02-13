@@ -12,6 +12,15 @@ import { Router } from '@angular/router';
 export class FestivalStartComponent {
   protected router = inject(Router);
 
+  artists = [
+    { name: 'ASAP ROCKY', image: 'artistsFestival/rocky.png' },
+    { name: 'FUTURE', image: 'artistsFestival/future.png' },
+    { name: 'PESO PLUMA', image: 'artistsFestival/peso.png' },
+    { name: 'PLAYBOI CARTI', image: 'artistsFestival/carti.png' }
+  ];
+
+
+
   back() {
     this.router.navigate(['/']);
   }

@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 })
 export class UserStartComponent {
   protected router = inject(Router);
+  toggleFavorite(artist: any) {
+    artist.favorite = !artist.favorite;
+  }
   artists = [
     { name: "Led Zeppelin", image: "artists/LedZeppelin.png", favorite: true },
     { name: "AC / DC", image: "artists/acdc.png", favorite: false },
@@ -21,10 +24,6 @@ export class UserStartComponent {
     { name: "Billie Eilish", image: "artists/billie.png", favorite: false },
     { name: "Sabrina Carpenter", image: "artists/sabrina.png", favorite: false },
   ];
-
-  toggleFavorite(artist: any) {
-    artist.favorite = !artist.favorite;
-  }
 
   back() {
     this.router.navigate(['/']);
