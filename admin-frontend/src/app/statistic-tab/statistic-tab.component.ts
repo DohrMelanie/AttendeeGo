@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './statistic-tab.component.html',
-  styleUrl: './statistic-tab.component.css'
 })
 export class StatisticTabComponent {
 
