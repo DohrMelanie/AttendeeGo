@@ -71,14 +71,14 @@
       @for (stage of stages(); track stage) { @for (act of getActs(stage); track
       act.name) {
       <div
-        class="event bg-secondary-800 border text-xs p-1 flex flex-col relative"
+        class="event bg-secondary-800 border text-2xl p-1 flex flex-col relative"
         [style.gridColumn]="stages().indexOf(stage) + 2"
         [style.gridRow]="getStartRow(act) + ' / span ' + getRowSpan(act)"
         style="pointer-events: auto"
       >
         <strong>{{ act.name }}</strong
         ><br />
-        <small>
+        <p class="text-lg">
           {{ act.beginTime.getHours() }}:
           {{
             act.beginTime.getMinutes() <= 9
@@ -91,7 +91,7 @@
               ? "0" + act.endTime.getMinutes()
               : act.endTime.getMinutes()
           }}
-        </small>
+        </p>
         @if(act.friends && act.friends.length > 0) {
         <div class="flex flex-row m-2 absolute align-baseline bottom-0">
           @for(friend of act.friends; track friend) {
