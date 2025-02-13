@@ -6,9 +6,8 @@ import * as L from 'leaflet';
   selector: 'app-map',
   standalone: true,
   imports: [NavbarFestivalComponent],
-  templateUrl: './map.component.html',
-  styleUrl: './map.component.css',
+  templateUrl: './map.component.html'
 })
-export class MapComponent {  
-  
+export class MapComponent {
+
 }

@@ -10,6 +10,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { FriendsComponent } from './friends/friends.component';
 import { FindFriendsComponent } from './find-friends/find-friends.component';
 import { TimetableComponent } from './timetable/timetable.component';
+import { NotificationsComponent } from './notifications/notifications.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/start-page', pathMatch: 'full' },
@@ -23,5 +24,6 @@ export const routes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'friends', component: FriendsComponent },
   { path: 'find-friends', component: FindFriendsComponent },
-  { path: 'timetable', component: TimetableComponent }
+  { path: 'timetable', component: TimetableComponent },
+  { path: 'notifications', component: NotificationsComponent }
 ];

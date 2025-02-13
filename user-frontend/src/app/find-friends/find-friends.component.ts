@@ -6,7 +6,6 @@ import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
   standalone: true,
   imports: [NavbarUserComponent],
   templateUrl: './find-friends.component.html',
-  styleUrl: './find-friends.component.css'
 })
 export class FindFriendsComponent {
   people = signal([
