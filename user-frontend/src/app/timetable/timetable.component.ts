@@ -1,19 +1,28 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { TimetableService, Act, Day } from '../timetable.service';
 import { NavbarFestivalComponent } from "../navbar-festival/navbar-festival.component";
+import { BellComponent } from '../bell/bell.component';
+import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-timetable',
   standalone: true,
-  imports: [NavbarFestivalComponent],
+  imports: [NavbarFestivalComponent, BellComponent],
   templateUrl: './timetable.component.html',
   styleUrls: ['./timetable.component.css']
 })
 export class TimetableComponent {
+  protected router = inject(Router);
+  
+  back() {
+    this.router.navigate(['/']);
+  }
+
+
   constructor(private timetableService: TimetableService) {}
 
-  stages = signal<string[]>(['Stage 1', 'Stage 2', 'Stage 3']);
+  stages = signal<string[]>(['Stage 1', "Lil C's terminal", 'Stage 3']);
   days: Day[] = [
     { id: "tag-1", month: "Mai", day: "1", weekday: "Do", active: false },
     { id: "tag-2", month: "Mai", day: "2", weekday: "Fr", active: true },

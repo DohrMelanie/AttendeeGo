@@ -14,5 +14,5 @@ export class NavbarFestivalComponent {
     this.activeTab.set(path);
     localStorage.setItem('activeTab', path);
     this.router.navigate(['/' + path]);
-  }
+  }  
 }
