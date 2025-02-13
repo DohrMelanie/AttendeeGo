@@ -17,7 +17,6 @@ interface Activity {
   templateUrl: './notifications.component.html',
 })
 export class NotificationsComponent {
-  location = inject(Location);
   activities: Activity[] = [
     {
       username: 'Veranstalter',
@@ -61,7 +60,4 @@ export class NotificationsComponent {
       importance: 1,
     },
   ];
-  back() {
-    this.location.back();
-  }
 }
