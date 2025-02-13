@@ -4,7 +4,10 @@
   <app-bell></app-bell>
 </div>
 
-<mat-slide-toggle>Heat Map</mat-slide-toggle>
-<img src="map/coachella.jpg" alt="Festival Map" class="w-full">
+<mat-slide-toggle [(ngModel)]="heatMapEnabled" class="m-3">Heat Map</mat-slide-toggle>
+
+<img [src]="heatMapEnabled() ? 'map/coachella_heated.jpg' : 'map/coachella.jpg'"
+     alt="Festival Map"
+     class="w-full">
 
 <app-navbar-festival class="fixed bottom-0 w-full"></app-navbar-festival>

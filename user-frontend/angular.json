@@ -49,7 +49,7 @@
               {
                 "glob": "**/*",
                 "input": "public",
-                "src/assets"
+                "src/assets": "assets"
               }
             ],
             "styles": [

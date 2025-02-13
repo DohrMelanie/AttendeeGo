@@ -1,8 +1,9 @@
 import { NavbarFestivalComponent } from '../navbar-festival/navbar-festival.component';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { BellComponent } from '../bell/bell.component';
 import { BackComponent } from '../back/back.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -14,9 +15,11 @@ import { MatCardModule } from '@angular/material/card';
     BackComponent,
     MatSlideToggleModule,
     MatCardModule,
+    FormsModule,
   ],
   templateUrl: './map.component.html',
 })
 export class MapComponent {
+  heatMapEnabled = signal<boolean>(false);
   constructor() {}
 }
