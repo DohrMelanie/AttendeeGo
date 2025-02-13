@@ -1,4 +1,9 @@
-<app-nav />
-<div class="mt-32">
-    <router-outlet />
+<div [classList]="darkMode()?'dark absolute top-0 left-0 flex flex-col items-center h-svh w-svw bg-background-500': 'light absolute top-0 left-0 flex flex-col items-center h-svh w-svw bg-background-500'">
+    <app-nav />
+    <div class="mt-32">
+        <router-outlet />
+    </div>
+    <div (click)="toggleMode()" class="fixed bottom-5 right-5 cursor-pointer text-xl select-none">
+        🌓
+    </div>
 </div>
