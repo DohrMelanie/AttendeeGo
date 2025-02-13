@@ -78,6 +78,7 @@
               [style.gridTemplateColumns]="
                 '60px repeat(' + stages().length + ', 1fr)'
               "
+              [style.gridTemplateRows]="'repeat(' + totalIntervals + ', 10px)'"
               style="grid-template-rows: repeat(288, 10px)"
             >
               @for (interval of getIntervals(); track interval) { @if (interval
@@ -162,7 +163,9 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title class="w-full h-full flex justify-center items-center">
-        <div class="text-center text-lg flex justify-center items-center text-foreground-500">
+        <div
+          class="text-center text-lg flex justify-center items-center text-foreground-500"
+        >
           Maps
         </div>
       </mat-panel-title>
@@ -190,7 +193,9 @@
   >
     <mat-expansion-panel-header>
       <mat-panel-title class="w-full h-full flex justify-center items-center">
-        <div class="text-center text-lg flex justify-center items-center text-gray-200">
+        <div
+          class="text-center text-lg flex justify-center items-center text-gray-200"
+        >
           Cashless Payment
         </div>
       </mat-panel-title>
