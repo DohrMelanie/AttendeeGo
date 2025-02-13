@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [NavbarUserComponent],
   templateUrl: './user-start.component.html',
-  styleUrl: './user-start.component.css'
 })
 export class UserStartComponent {
   protected router = inject(Router);

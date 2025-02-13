@@ -6,7 +6,6 @@ import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
   standalone: true,
   imports: [NavbarUserComponent],
   templateUrl: './friends.component.html',
-  styleUrl: './friends.component.css'
 })
 export class FriendsComponent {
   friendRequests = signal([

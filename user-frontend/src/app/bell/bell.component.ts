@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './bell.component.html',
-  styleUrl: './bell.component.css'
 })
 export class BellComponent {
   protected router = inject(Router);

@@ -6,7 +6,6 @@ import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
   standalone: true,
   imports: [NavbarUserComponent],
   templateUrl: './settings.component.html',
-  styleUrl: './settings.component.css'
 })
 export class SettingsComponent {
 
