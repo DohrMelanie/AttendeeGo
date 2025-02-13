@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavbarFestivalComponent } from '../navbar-festival/navbar-festival.component';
-import { Location } from '@angular/common';
 
 interface Activity {
   profileImage?: string;

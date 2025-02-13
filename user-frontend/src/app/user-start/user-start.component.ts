@@ -23,8 +23,4 @@ export class UserStartComponent {
     { name: "Billie Eilish", image: "artists/billie.png", favorite: false },
     { name: "Sabrina Carpenter", image: "artists/sabrina.png", favorite: false },
   ];
-
-  back() {
-    this.router.navigate(['/']);
-  }
 }

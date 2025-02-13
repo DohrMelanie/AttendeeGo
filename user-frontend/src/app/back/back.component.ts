@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-back',
@@ -9,9 +10,8 @@ import { Component, inject } from '@angular/core';
   styleUrl: './back.component.css'
 })
 export class BackComponent {
-  location = inject(Location);
-
+  protected router = inject(Router);
   back() {
-    this.location.back();
+    this.router.navigate(['/']);
   }
 }
