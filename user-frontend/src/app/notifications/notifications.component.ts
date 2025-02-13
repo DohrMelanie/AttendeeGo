@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarFestivalComponent } from '../navbar-festival/navbar-festival.component';
+import { Location } from '@angular/common';
 
 interface Activity {
   profileImage?: string;
@@ -16,6 +17,11 @@ interface Activity {
   templateUrl: './notifications.component.html',
 })
 export class NotificationsComponent {
+  location = inject(Location);
+  back() {
+    this.location.back();
+  }
+
   activities: Activity[] = [
     {
       username: 'Veranstalter',
