@@ -13,12 +13,12 @@
       >
     </mat-expansion-panel-header>
     <div>
-      <p>Artists</p>
+      <p class="self-center text-2xl font-bold">Artists</p>
       <div class="flex flex-wrap">
-        <div class="flex flex-wrap w-1/3">
+        <div class="flex flex-col pr-10 flex-wrap w-1/3">
           @for (artist of artists; track $index) {
           <button
-            class="artist-card bg-background-500 text-foreground-500 p-2 m-2 rounded-lg"
+            class="artist-card w-full bg-accent-800 text-foreground-500 p-2 m-2 rounded-lg"
             (click)="openPopup(artist)"
           >
             <img
