@@ -9,7 +9,7 @@
   <div class="flex p-2 rounded-lg space-x-2 justify-center relative">
     @for (day of days; track day.id) {
     <div
-      class="px-4 py-2 text-center font-bol rounded-lg cursor-pointer"
+      class="px-4 py-2 text-center rounded-lg cursor-pointer"
       [class.bg-primary-700]="day.active"
       [class.rounded-lg]="day.active"
       (click)="selectDay(day.id)"
@@ -37,8 +37,9 @@
     class="timetable-body overflow-y-auto border border-gray-300 h-svh relative"
   >
     <div
-      class="background-grid grid relative"
+      class="background-grid grid relative pt-2"
       [style.gridTemplateColumns]="'60px repeat(' + stages().length + ', 1fr)'"
+      [style.gridTemplateRows]="'repeat(' + totalIntervals + ', 10px)'"
       style="grid-template-rows: repeat(288, 10px)"
     >
       @for (interval of getIntervals(); track interval) { @if (interval % 3 ===
