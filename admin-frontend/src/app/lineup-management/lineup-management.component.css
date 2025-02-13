@@ -1,0 +1,7 @@
+.mat-expansion-panel {
+    @apply bg-primary-600 text-foreground-600;
+}
+
+.map-expansion-panel-header{
+    @apply bg-primary-600 text-foreground-600;
+}

@@ -8,5 +8,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './start-page.component.html',
 })
 export class StartPageComponent {
-
+  constructor() {
+    localStorage.clear();
+  }
 }
