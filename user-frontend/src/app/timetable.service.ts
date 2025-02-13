@@ -46,18 +46,18 @@ export class TimetableService {
         },
         {
           name: 'Within Destruction',
-          beginTime: new Date('2023-10-01T20:30:00'),
-          endTime: new Date('2023-10-01T22:00:00'),
-          friends: ['friends/Friend1.jpg', 'friends/Friend4.jpg', 'friends/Friend3.jpg'],
+          beginTime: new Date('2023-10-01T20:00:00'),
+          endTime: new Date('2023-10-01T21:00:00'),
+          friends: ['friends/Friend4.jpg', 'friends/Friend2.jpg', 'friends/Friend6.jpg'],
         },
         {
           name: 'Shadow of Intent',
-          beginTime: new Date('2023-10-01T22:30:00'),
-          endTime: new Date('2023-10-01T23:30:00'),
+          beginTime: new Date('2023-10-01T21:30:00'),
+          endTime: new Date('2023-10-01T22:30:00'),
           friends: ['friends/Friend4.jpg', 'friends/Friend1.jpg', 'friends/Friend5.jpg'],
         },
       ];
-    } else if (stage === 'Stage 2') {
+    } else if (stage === "Lil C's terminal") {
       return [
         {
           name: 'Architects',
@@ -75,19 +75,20 @@ export class TimetableService {
           endTime: new Date('2023-10-01T15:30:00'),
         },
         {
-          name: 'Currents',
+          name: 'DJ Hashbang',
           beginTime: new Date('2023-10-01T16:00:00'),
           endTime: new Date('2023-10-01T18:00:00'),
         },
         {
-          name: 'Polaris',
-          beginTime: new Date('2023-10-01T19:30:00'),
-          endTime: new Date('2023-10-01T21:00:00'),
+          name: 'Lil C',
+          beginTime: new Date('2023-10-01T19:20:00'),
+          endTime: new Date('2023-10-01T21:50:00'),
+          friends: ['friends/Friend1.jpg', 'friends/Friend6.jpg', 'friends/Friend4.jpg', 'friends/Friend3.jpg'],
         },
         {
-          name: 'Lil C',
-          beginTime: new Date('2023-10-01T21:30:00'),
-          endTime: new Date('2023-10-01T23:00:00'),
+          name: 'Fatal StageOverflow',
+          beginTime: new Date('2023-10-01T22:00:00'),
+          endTime: new Date('2023-10-01T23:30:00'),
           friends: ['friends/Friend1.jpg', 'friends/Friend4.jpg', 'friends/Friend3.jpg'],
         },
       ];

@@ -1,4 +1,15 @@
-<img src="map/Map.jpg" alt="Festival Map" class="h-svh">
+<div class="flex items-center justify-between p-2 pb-4 shadow-sm z-10 ">
+  <button
+  (click)="back()"
+  class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg m-2"
+  >
+    <span class="material-icons text-2xl">undo</span>
+  </button>
+  <h1 class="text-2xl font-bold mt-2">Regex Rave Map</h1>
+  <app-bell></app-bell>
+</div>  
+
+<img src="map/Map.jpg" alt="Festival Map" class="h-svh -z-20">
 
 
 <app-navbar-festival class="fixed bottom-0 w-full"></app-navbar-festival>

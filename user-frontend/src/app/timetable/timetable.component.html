@@ -1,5 +1,15 @@
 <div class="timetable-container max-h-svh relative overflow-y-hidden flex flex-col">
-    <h2 class="text-center my-3 relative">Timetable</h2>
+    <div class="flex items-center justify-between p-2 pb-4 shadow-sm z-10 ">
+        <button
+        (click)="back()"
+        class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg m-2"
+        >
+          <span class="material-icons text-2xl">undo</span>
+        </button>
+        <h1 class="text-2xl font-bold mt-2 just">Regex Rave Timetable</h1>
+        <app-bell></app-bell>
+      </div>  
+      
     
     <div class="flex p-2 rounded-lg space-x-2 justify-center relative">
         @for (day of days; track day.id) {

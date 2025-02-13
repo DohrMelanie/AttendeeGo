@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { StartPageComponent } from './start-page/start-page.component';
 import { FestivalStartComponent } from './festival-start/festival-start.component';
 import { UserStartComponent } from './user-start/user-start.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
@@ -11,10 +10,11 @@ import { FriendsComponent } from './friends/friends.component';
 import { FindFriendsComponent } from './find-friends/find-friends.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { NotificationsComponent } from './notifications/notifications.component';
+import { FestivalsComponent } from './festivals/festivals.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/start-page', pathMatch: 'full' },
-  { path: 'start-page', component: StartPageComponent },
+  { path: '', redirectTo: '/festivals', pathMatch: 'full' },
+  { path: 'festivals', component: FestivalsComponent },
   { path: 'festival-start', component: FestivalStartComponent },
   { path: 'user-start', component: UserStartComponent },
   { path: 'navbar-user', component: NavbarUserComponent },

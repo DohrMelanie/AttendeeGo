@@ -1,0 +1,35 @@
+<div class="flex flex-col items-center">
+  <img src="slogan.png" alt="Slogan image" class="w-full" />
+  <h1 class="text-foreground-800 m-2 mt-6">Welcome to AttendeeGo</h1>
+
+  <div class="space-y-4 flex flex-col items-center">
+    <h3>Festivals</h3>
+    <button
+      [routerLink]="'/festival-start'"
+      class="bg-background-500 text-white py-4 px-6 rounded-2xl text-lg w-32"
+    >
+      RegEx Rave
+    </button>
+    <button
+      [routerLink]="'/festival-start'"
+      class="bg-background-600 text-white py-4 px-6 rounded-2xl text-lg w-32"
+    >
+      Syntax Symphony
+    </button>
+    <button
+      [routerLink]="'/festival-start'"
+      class="bg-background-700 text-white py-4 px-6 rounded-2xl text-lg w-32"
+    >
+      BitBash
+    </button>
+    <button
+      [routerLink]="'/festival-start'"
+      class="bg-background-800 text-white py-4 px-6 rounded-2xl text-lg w-32"
+    >
+      Sound Stack
+    </button>
+  </div>
+</div>
+
+
+<app-navbar-user class="fixed bottom-0 w-full"></app-navbar-user>

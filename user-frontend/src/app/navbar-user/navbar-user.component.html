@@ -1,6 +1,14 @@
 <nav class="bg-secondary-200 flex justify-around items-center p-1 text-black">
   <div
     class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
+    (click)="navigateTo('festivals')"
+    [ngClass]="{ 'bg-accent-300': activeTab() === 'festivals' }"
+  >
+    <span class="material-icons text-sm">home</span>
+    <span class="text-xs">Home</span>
+  </div>
+  <div
+    class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
     (click)="navigateTo('user-start')"
     [ngClass]="{ 'bg-accent-300': activeTab() === 'user-start' }"
   >
