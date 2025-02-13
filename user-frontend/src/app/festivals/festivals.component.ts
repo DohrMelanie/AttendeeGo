@@ -7,7 +7,6 @@ import { NavbarUserComponent } from '../navbar-user/navbar-user.component';
   standalone: true,
   imports: [RouterLink, NavbarUserComponent],
   templateUrl: './festivals.component.html',
-  styleUrl: './festivals.component.css'
 })
 export class FestivalsComponent {
   constructor() {

@@ -1,35 +1,33 @@
 <div class="flex flex-col items-center">
   <img src="slogan.png" alt="Slogan image" class="w-full" />
-  <h1 class="text-foreground-800 m-2 mt-6">Welcome to AttendeeGo</h1>
+  <h1 class="text-foreground-800 m-2 my-6 text-2xl">Welcome to AttendeeGo</h1>
 
-  <div class="space-y-4 flex flex-col items-center">
-    <h3>Festivals</h3>
+  <div class="space-y-4 flex flex-col w-full px-4">
     <button
       [routerLink]="'/festival-start'"
-      class="bg-background-500 text-white py-4 px-6 rounded-2xl text-lg w-32"
+      class="bg-primary-700 text-white p-4 rounded-2xl text-lg w-full"
     >
       RegEx Rave
     </button>
     <button
       [routerLink]="'/festival-start'"
-      class="bg-background-600 text-white py-4 px-6 rounded-2xl text-lg w-32"
+      class="bg-primary-700 text-white p-4 rounded-2xl text-lg w-full"
     >
       Syntax Symphony
     </button>
     <button
       [routerLink]="'/festival-start'"
-      class="bg-background-700 text-white py-4 px-6 rounded-2xl text-lg w-32"
+      class="bg-primary-700 text-white p-4 rounded-2xl text-lg w-full"
     >
       BitBash
     </button>
     <button
       [routerLink]="'/festival-start'"
-      class="bg-background-800 text-white py-4 px-6 rounded-2xl text-lg w-32"
+      class="bg-primary-700 text-white p-4 rounded-2xl text-lg w-full"
     >
       Sound Stack
     </button>
   </div>
 </div>
-
 
 <app-navbar-user class="fixed bottom-0 w-full"></app-navbar-user>

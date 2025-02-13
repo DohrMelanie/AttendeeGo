@@ -1,8 +1,8 @@
-<nav class="bg-primary-200 flex justify-around items-center p-1 text-black">
+<nav class="bg-primary-600 flex justify-around items-center p-1 text-white">
   <div
     class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
     (click)="navigateTo('festival-start')"
-    [ngClass]="{ 'bg-secondary-300': activeTab() === 'festival-start' }"
+    [ngClass]="{ 'bg-primary-500': activeTab() === 'festival-start' }"
   >
     <span class="material-icons text-lg">home</span>
     <span class="text-xs">Home</span>
@@ -11,7 +11,7 @@
   <div
     class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
     (click)="navigateTo('map')"
-    [ngClass]="{ 'bg-secondary-300': activeTab() === 'map' }"
+    [ngClass]="{ 'bg-primary-500': activeTab() === 'map' }"
   >
     <span class="material-icons text-lg">map</span>
     <span class="text-xs">Map</span>
@@ -20,7 +20,7 @@
   <div
     class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
     (click)="navigateTo('timetable')"
-    [ngClass]="{ 'bg-secondary-300': activeTab() === 'timetable' }"
+    [ngClass]="{ 'bg-primary-500': activeTab() === 'timetable' }"
   >
     <span class="material-icons text-lg">event</span>
     <span class="text-xs">Timetable</span>
@@ -29,7 +29,7 @@
   <div
     class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
     (click)="navigateTo('info')"
-    [ngClass]="{ 'bg-secondary-300': activeTab() === 'info' }"
+    [ngClass]="{ 'bg-primary-500': activeTab() === 'info' }"
   >
     <span class="material-icons text-lg">more_horiz</span>
     <span class="text-xs">Info</span>

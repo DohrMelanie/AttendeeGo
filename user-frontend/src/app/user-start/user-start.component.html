@@ -3,11 +3,11 @@
     <input
       type="text"
       placeholder="Find Artists ..."
-      class="w-full p-2 mb-4 rounded-lg bg-background-950 text-sm"
+      class="w-full p-2 mb-4 rounded-lg bg-secondary-700 text-sm"
     />
   </div>
    @for (artist of artists; track $index) {
-    <div class="flex items-center justify-between bg-secondary-400 p-4 rounded-lg mb-3">
+    <div class="flex items-center justify-between bg-primary-800 p-4 rounded-lg mb-3">
       <div class="flex items-center space-x-2">
         <img [src]="artist.image" class="h-12 w-12 rounded-xl object-contain" alt="Artist Logo">
         <span class="text-black text-sm">{{ artist.name }}</span>
