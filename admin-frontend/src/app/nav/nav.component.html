@@ -1,17 +1,17 @@
 <div class="flex w-full flex-row justify-between items-center py-3 px-14 bg-primary-800 shadow-lg fixed top-0 left-0 z-50 select-none">
     <div (click)="goHome()" id="title" class="flex flex-row justify-center w-1/6 items-center h-full text-center hover:bg-white/20 p-2 rounded-lg">
-        <div class="text-3xl text-center h-full items-center justify-self-center m-0">{{ festivalName() }}</div>
+        <div class="text-3xl text-foreground-500 text-center h-full items-center justify-self-center m-0">{{ festivalName() }}</div>
         <mat-icon aria-hidden="false" aria-label="Arrow Down" fontIcon="arrow-down"></mat-icon>
     </div>
     @if (id() !== 0) {
         <div class="flex flex-row w-1/3 items-center justify-evenly cursor-pointer">
-            <div (click)="goTo('content')" [classList]="string() === 0?'active rounded-l-lg flex-1':'inactive rounded-l-lg flex-1'">
+            <div (click)="goTo('content')" [classList]="string() === 0?'active text-foreground-500 rounded-l-lg flex-1':'inactive text-foreground-500 rounded-l-lg flex-1'">
                 Content
             </div>
-            <div (click)="goTo('social')" [classList]="string() === 1?'active flex-1':'inactive flex-1'">
+            <div (click)="goTo('social')" [classList]="string() === 1?'active text-foreground-500 flex-1':'inactive text-foreground-500 flex-1'">
                 Social/Ads
             </div>
-            <div (click)="goTo('statistic')" [classList]="string() === 2?'active rounded-r-lg flex-1':'inactive rounded-r-lg flex-1'">
+            <div (click)="goTo('statistic')" [classList]="string() === 2?'active text-foreground-500 rounded-r-lg flex-1':'inactive text-foreground-500 rounded-r-lg flex-1'">
                 Statistics
             </div>
         </div>
