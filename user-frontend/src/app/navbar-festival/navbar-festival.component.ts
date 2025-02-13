@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,5 +14,5 @@ export class NavbarFestivalComponent {
     this.activeTab.set(path);
     localStorage.setItem('activeTab', path);
     this.router.navigate(['/' + path]);
-  }  
+  }
 }
