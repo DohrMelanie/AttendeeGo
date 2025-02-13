@@ -1,0 +1,7 @@
+.active {
+    @apply bg-accent-500 text-background-800 w-full flex justify-center items-center p-3 h-full transition-all duration-100 ease-in-out select-none
+}
+
+.inactive {
+    @apply bg-accent-800 hover:bg-accent-600 w-full flex justify-center items-center p-3 h-full transition-all duration-100 ease-in-out select-none
+}
