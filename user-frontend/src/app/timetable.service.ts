@@ -75,7 +75,7 @@ export class TimetableService {
           endTime: new Date('2023-10-01T15:30:00'),
         },
         {
-          name: 'Northlane',
+          name: 'Currents',
           beginTime: new Date('2023-10-01T16:00:00'),
           endTime: new Date('2023-10-01T18:00:00'),
         },
@@ -85,7 +85,7 @@ export class TimetableService {
           endTime: new Date('2023-10-01T21:00:00'),
         },
         {
-          name: 'Thy Art Is Murder',
+          name: 'Lil C',
           beginTime: new Date('2023-10-01T21:30:00'),
           endTime: new Date('2023-10-01T23:00:00'),
           friends: ['friends/Friend1.jpg', 'friends/Friend4.jpg', 'friends/Friend3.jpg'],
@@ -112,7 +112,7 @@ export class TimetableService {
           name: 'Vulvodynia',
           beginTime: new Date('2023-10-01T16:00:00'),
           endTime: new Date('2023-10-01T18:00:00'),
-          friends: ['friends/Freund2.jpg']
+          friends: ['friends/Friend2.jpg']
         },
         {
           name: 'Fit for a King',
@@ -121,7 +121,7 @@ export class TimetableService {
           friends: ['friends/Friend2.jpg', 'friends/Friend6.jpg', 'friends/Friend7.jpg'],
         },
         {
-          name: 'Currents',
+          name: 'Thy Art Is Murder',
           beginTime: new Date('2023-10-01T20:30:00'),
           endTime: new Date('2023-10-01T21:30:00'),
         },
