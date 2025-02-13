@@ -1,9 +1,12 @@
-<button (click)="back()" class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg m-2">
-  <span class="material-icons text-2xl">undo</span>
-</button>
+<div class="flex items-center justify-between p-2">
+  <button (click)="back()" class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg m-2">
+    <span class="material-icons text-2xl">undo</span>
+  </button>
+  <h1 class="text-2xl font-bold mt-2">Artists</h1>
+  <app-bell></app-bell>
+</div>
 
-<div class="p-4">
-  <h1 class="text-2xl font-bold">Artists</h1>
+<div class="p-2">
   <div class="mt-4 space-y-4">
     @for (artist of artists; track $index) {
       <div class="relative rounded-lg overflow-hidden">
