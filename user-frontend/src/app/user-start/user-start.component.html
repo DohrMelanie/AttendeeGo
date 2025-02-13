@@ -2,11 +2,12 @@
   <div class="fixed top-0 left-0 w-full flex items-center justify-between p-2 bg-primary-900">
     <input
       type="text"
+      [(ngModel)]="searchTerm"
       placeholder="Find Artists ..."
       class="w-full p-2 rounded-lg bg-primary-400 text-sm"
     />
   </div>
-   @for (artist of artists; track $index) {
+  @for (artist of filteredArtists; track $index) {
     <div class="flex items-center justify-between bg-primary-800 p-4 rounded-lg mb-3">
       <div class="flex items-center space-x-2">
         <img [src]="artist.image" class="h-12 w-12 rounded-xl object-contain" alt="Artist Logo">
@@ -18,7 +19,7 @@
         </span>
       </button>
     </div>
-   }
+  }
    <div class="mt-20"></div>
 </div>
 
