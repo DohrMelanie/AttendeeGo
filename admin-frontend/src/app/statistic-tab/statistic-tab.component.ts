@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-statistic-tab',
@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './statistic-tab.component.html',
 })
 export class StatisticTabComponent {
-
 }

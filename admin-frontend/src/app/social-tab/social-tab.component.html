@@ -1,0 +1,85 @@
+<div
+  class="bg-primary-600 text-white text-lg px-4 py-3 flex justify-between rounded-xl"
+>
+  <div class="p-4 space-y-4 text-white">
+    <p class="text-xl">Notifications</p>
+
+    <div class="flex items-center">
+      <label class="w-1/4">Category:</label>
+      <mat-select [(value)]="selectedCategory" class="bg-white p-2 rounded-xl">
+        @for (category of categories(); track $index) {
+        <mat-option [value]="category">{{ category }}</mat-option>
+        }
+      </mat-select>
+    </div>
+
+    <div>
+      <label>Priority:</label>
+      <div class="space-x-4">
+        <button class="bg-green-600 rounded-xl p-2">Not important</button>
+        <button class="bg-orange-600 rounded-xl p-2">Important</button>
+        <button class="bg-red-600 rounded-xl p-2">Very important</button>
+      </div>
+    </div>
+
+    <div>
+      <label>Title:</label>
+      <input
+        type="text"
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+        placeholder="Enter your Notification Title..."
+      />
+    </div>
+
+    <div>
+      <label>Message:</label>
+      <textarea
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+        placeholder="Enter your Message..."
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Image:</label>
+      <input
+        type="file"
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+      />
+    </div>
+  </div>
+</div>
+
+<div
+  class="bg-primary-600 text-white text-lg px-4 py-3 flex mt-8 justify-between rounded-xl mb-6"
+>
+  <div class="p-4 space-y-4 text-white">
+    <p class="text-xl">Ads</p>
+
+    <div class="flex items-center">
+      <label class="w-1/4 mr-16">Platforms:</label>
+      <mat-select [(value)]="selectedPlatform" class="bg-white py-2 px-6 rounded-xl">
+        @for (platform of adPlatforms(); track $index) {
+        <mat-option [value]="platform">{{ platform }}</mat-option>
+        }
+      </mat-select>
+    </div>
+
+    <div>
+      <label>Message:</label>
+      <textarea
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+        placeholder="Enter your Message..."
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Image:</label>
+      <input
+        type="file"
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+      />
+    </div>
+
+    <button class="p-2 rounded-xl bg-primary-200">Post and Pay</button>
+  </div>
+</div>
