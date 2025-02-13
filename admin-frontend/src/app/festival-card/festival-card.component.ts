@@ -9,7 +9,6 @@ import { Festival } from '../festival.service';
   standalone: true,
   imports: [MatButtonModule, MatCardModule],
   templateUrl: './festival-card.component.html',
-  styleUrl: './festival-card.component.css'
 })
 export class FestivalCardComponent {
   @Input()

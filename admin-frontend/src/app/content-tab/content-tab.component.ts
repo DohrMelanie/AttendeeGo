@@ -7,7 +7,6 @@ import { LineupManagementComponent } from "../lineup-management/lineup-managemen
   standalone: true,
   imports: [LineupManagementComponent],
   templateUrl: './content-tab.component.html',
-  styleUrl: './content-tab.component.css'
 })
 export class ContentTabComponent {
   constructor(private route: ActivatedRoute) {}
