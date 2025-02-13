@@ -2,13 +2,12 @@ import { Component, effect, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { ChangeDetectorRef } from '@angular/core';
 import { FestivalService } from '../festival.service';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [MatIconModule],
+  imports: [ MatIconModule ],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
@@ -25,7 +24,7 @@ export class NavComponent implements OnInit {
       if(!Number.isNaN(this.id())){
         this.festivalName.set((await festivalService.getFestival(this.id())).name)
       }
-    })
+    });
 
     iconRegistry.addSvgIconLiteral(
       'arrow-down',
@@ -43,7 +42,12 @@ export class NavComponent implements OnInit {
 
       const parts = this.router.url.split('/');
 
-      this.id.set(parseInt(parts[parts.length-1]));
+      const val = parseInt(parts[parts.length-1]);
+
+      if(val){
+        this.id.set(val);
+      }
+      else this.id.set(0);
 
       if (i.includes("content")) {
         this.string.set(0);
@@ -58,5 +62,9 @@ export class NavComponent implements OnInit {
   goTo(path: string) {
     console.log(this.id());
     this.router.navigateByUrl(`${path}/` + this.id());
+  }
+
+  goHome(){
+    this.router.navigateByUrl('/')
   }
 }

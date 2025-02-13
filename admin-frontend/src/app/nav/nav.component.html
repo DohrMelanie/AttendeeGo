@@ -1,5 +1,5 @@
-<div class="flex w-full flex-row justify-between items-center py-3 px-14 bg-primary-800 shadow-lg fixed top-0 left-0 z-50">
-    <div id="title" class="flex flex-row justify-center items-center h-full text-center">
+<div class="flex w-full flex-row justify-between items-center py-3 px-14 bg-primary-800 shadow-lg fixed top-0 left-0 z-50 select-none">
+    <div (click)="goHome()" id="title" class="flex flex-row justify-center items-center h-full text-center hover:bg-white/20 p-2 rounded-lg">
         <div class="text-3xl text-center h-full items-center justify-self-center m-0">{{ festivalName() }}</div>
         <mat-icon aria-hidden="false" aria-label="Arrow Down" fontIcon="arrow-down"></mat-icon>
     </div>
