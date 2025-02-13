@@ -46,6 +46,9 @@
         class="w-full p-2 bg-primary-200 text-white rounded-lg"
       />
     </div>
+    <div class="w-full flex justify-end flex-row items-center">
+      <button class="p-2 rounded-xl bg-primary-200">Post</button>
+    </div>
   </div>
 </div>
 
@@ -57,7 +60,10 @@
 
     <div class="flex items-center">
       <label class="w-1/4 mr-16">Platforms:</label>
-      <mat-select [(value)]="selectedPlatform" class="bg-white py-2 px-6 rounded-xl">
+      <mat-select
+        [(value)]="selectedPlatform"
+        class="bg-white py-2 px-6 rounded-xl"
+      >
         @for (platform of adPlatforms(); track $index) {
         <mat-option [value]="platform">{{ platform }}</mat-option>
         }
@@ -79,7 +85,8 @@
         class="w-full p-2 bg-primary-200 text-white rounded-lg"
       />
     </div>
-
-    <button class="p-2 rounded-xl bg-primary-200">Post and Pay</button>
+    <div class="w-full flex justify-end flex-row items-center">
+      <button class="p-2 rounded-xl bg-primary-200">Post and Pay</button>
+    </div>
   </div>
 </div>
