@@ -1,4 +1,4 @@
-<mat-card class="max-w-[30%]">
+<mat-card class="w-full">
     <mat-card-header class="bg-primary-800 rounded-t-lg">
         <div mat-card-avatar class="bg-secondary-600"></div>
         <mat-card-title class="text-foreground-500">{{festival[0].name}}</mat-card-title>
@@ -6,9 +6,19 @@
     </mat-card-header>
     <img mat-card-image class="object-cover max-h-[20vh] aspect-video" [src]="festival[0].imageUrl" alt="Photo of a Shiba Inu">
     <mat-card-content class="bg-primary-800">
-        <p class="p-3">
-            {{festival[0].description}}
-        </p>
+        <div class="w-full h-full flex justify-start gap-2 flex-col p-2 text-foreground-500">
+            <div class="flex flex-col gap-1">
+                <div class="font-bold text-xl">
+                    {{ festival[0].name }}
+                </div>
+                <div class="font-bold">
+                    {{ festival[0].startDate }} - {{ festival[0].endDate }}
+                </div>
+            </div>
+            <p>
+                {{ festival[0].description }}
+            </p>
+        </div>
     </mat-card-content>
     <mat-card-actions class="bg-primary-800 rounded-b-lg">
         <div class="flex justify-end w-full">
