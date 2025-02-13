@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { Festival } from '../overview/overview.component';
+import { Router } from '@angular/router';
+import { Festival } from '../festival.service';
 
 @Component({
   selector: 'app-festival-card',
@@ -13,4 +14,10 @@ import { Festival } from '../overview/overview.component';
 export class FestivalCardComponent {
   @Input()
   festival: Festival[] = []
+
+  constructor(private router: Router){}
+
+  navigate(id:number){
+    this.router.navigateByUrl("/content/" + id);
+  }
 }
