@@ -7,10 +7,9 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar-user.component.html',
-  styleUrl: './navbar-user.component.css'
 })
 export class NavbarUserComponent {
-  activeTab = signal<string>(localStorage.getItem('activeTab') || 'start-festival');
+  activeTab = signal<string>(localStorage.getItem('activeTab') || 'user-start');
   protected router = inject(Router);
 
   navigateTo(path: string) {

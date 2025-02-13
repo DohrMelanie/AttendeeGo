@@ -1,1 +1,34 @@
+<button
+  (click)="back()"
+  class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg m-2"
+>
+  <span class="material-icons text-2xl">undo</span>
+</button>
+<div class="w-full max-w-md mx-auto p-4 bg-white rounded-lg shadow-lg">
+  <h2 class="text-xl font-semibold mb-4">Notifications</h2>
+
+  @for (activity of activities; track $index) {
+  <div class="flex items-center mb-4">
+    <div class="flex-1">
+      <p class="text-sm">
+        @if(activity.importance === 1) {
+        <span class="text-red-500 font-bold">! </span>
+        }
+        <span class="font-semibold">{{ activity.username }}</span>
+
+        {{ activity.text }}
+      </p>
+      <p class="text-xs text-gray-500">{{ activity.timestamp }}</p>
+    </div>
+    @if (activity.profileImage) {
+    <img
+      [src]="activity.profileImage"
+      alt="Profile"
+      class="w-10 h-10 rounded-full mr-3"
+    />
+    }
+  </div>
+  }
+</div>
+
 <app-navbar-festival class="fixed bottom-0 w-full"></app-navbar-festival>
