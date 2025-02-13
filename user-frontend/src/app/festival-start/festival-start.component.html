@@ -13,7 +13,7 @@
 <div class="p-2">
   <div class="mt-4 space-y-4">
     @for (artist of artists; track $index) {
-    <div class="relative rounded-lg overflow-hidden">
+    <div class="relative rounded-lg overflow-scroll">
       <img [src]="artist.image" class="w-full h-40 object-cover" />
       <div
         class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"
