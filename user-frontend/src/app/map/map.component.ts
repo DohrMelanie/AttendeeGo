@@ -21,5 +21,6 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class MapComponent {
   heatMapEnabled = signal<boolean>(false);
+  eventsEnabled = signal<boolean>(false);
   constructor() {}
 }

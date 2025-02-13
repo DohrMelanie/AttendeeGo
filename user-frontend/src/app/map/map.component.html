@@ -1,13 +1,26 @@
-<div class="flex items-center justify-between p-2 pb-4 shadow-sm z-10 ">
+<div class="flex items-center justify-between p-2 pb-4 shadow-sm z-10">
   <app-back></app-back>
   <h1 class="text-2xl mt-2">Regex Rave Map</h1>
   <app-bell></app-bell>
 </div>
 
-<mat-slide-toggle [(ngModel)]="heatMapEnabled" class="m-3">Heat Map</mat-slide-toggle>
+<mat-slide-toggle [(ngModel)]="heatMapEnabled" class="m-3"
+  >Heat Map</mat-slide-toggle
+>
+<mat-slide-toggle [(ngModel)]="eventsEnabled" class="m-3"
+  >Event Map</mat-slide-toggle
+>
 
-<img [src]="heatMapEnabled() ? 'map/coachella_heated.jpg' : 'map/coachella.jpg'"
-     alt="Festival Map"
-     class="w-full">
+<img
+  [src]="
+    eventsEnabled()
+      ? 'map/coachella_events.jpg'
+      : heatMapEnabled()
+      ? 'map/coachella_heated.jpg'
+      : 'map/coachella.jpg'
+  "
+  alt="Festival Map"
+  class="w-full"
+/>
 
 <app-navbar-festival class="fixed bottom-0 w-full"></app-navbar-festival>

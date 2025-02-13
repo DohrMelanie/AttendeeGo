@@ -6,14 +6,14 @@
     <mat-expansion-panel-header class="">
       <mat-panel-title class="w-full h-full flex justify-center items-center"
         ><div
-          class="text-center flex justify-center items-center text-foreground-500"
+          class="text-center text-lg flex justify-center items-center text-foreground-500"
         >
           Lineup / Timetable
         </div></mat-panel-title
       >
     </mat-expansion-panel-header>
     <div>
-      <p class="self-center text-2xl font-bold">Artists</p>
+      <p class="self-center text-2xl">Artists</p>
       <div class="flex flex-wrap">
         <div class="flex flex-col pr-10 flex-wrap w-1/3">
           @for (artist of artists; track $index) {
@@ -159,13 +159,38 @@
     </div></mat-expansion-panel
   >
 
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="w-full h-full flex justify-center items-center">
+        <div class="text-center text-lg flex justify-center items-center text-foreground-500">
+          Maps
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <label>Name:</label>
+      <textarea
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+        placeholder="Enter the name of the map..."
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Image:</label>
+      <input
+        type="file"
+        class="w-full p-2 bg-primary-200 text-white rounded-lg"
+      />
+    </div>
+  </mat-expansion-panel>
+
   <mat-expansion-panel
     [disabled]="true"
     class="w-[90svw] bg-gray-500 opacity-50 cursor-not-allowed select-none"
   >
     <mat-expansion-panel-header>
       <mat-panel-title class="w-full h-full flex justify-center items-center">
-        <div class="text-center flex justify-center items-center text-gray-300">
+        <div class="text-center text-lg flex justify-center items-center text-gray-200">
           Cashless Payment
         </div>
       </mat-panel-title>
