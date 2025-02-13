@@ -10,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class NavbarFestivalComponent {
   activeTab = signal<string>(localStorage.getItem('activeTab') || 'start-festival');  protected router = inject(Router);
-  navigateTo(path: string) {
+  public navigateTo(path: string) {
     this.activeTab.set(path);
     localStorage.setItem('activeTab', path);
     this.router.navigate(['/' + path]);
   }
+  
 }
