@@ -1,30 +1,37 @@
 <nav class="bg-secondary-200 flex justify-around items-center p-1 text-black">
-  <div class="flex flex-col items-center" (click)="navigateTo('user-start')">
-    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'user-start'}">
-      <span class="material-icons text-sm">music_note</span>
-    </div>
+  <div
+    class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
+    (click)="navigateTo('user-start')"
+    [ngClass]="{ 'bg-accent-300': activeTab() === 'user-start' }"
+  >
+    <span class="material-icons text-sm">music_note</span>
     <span class="text-xs">Artists</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('find-friends')">
-    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'find-friends'}">
-      <span class="material-icons text-sm">search</span>
-    </div>
+  <div
+    class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
+    [ngClass]="{ 'bg-accent-300': activeTab() === 'find-friends' }"
+    (click)="navigateTo('find-friends')"
+  >
+    <span class="material-icons text-sm">search</span>
     <span class="text-xs">Meet</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('friends')">
-    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'friends'}">
-      <span class="material-icons text-sm">person_add</span>
-    </div>
+  <div
+    class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
+    (click)="navigateTo('friends')"
+    [ngClass]="{ 'bg-accent-300 rounded-full': activeTab() === 'friends' }"
+  >
+    <span class="material-icons text-sm">person_add</span>
     <span class="text-xs">Friends</span>
   </div>
 
-  <div class="flex flex-col items-center" (click)="navigateTo('settings')">
-    <div [ngClass]="{'bg-accent-300 rounded-full': activeTab() === 'settings'}">
-      <span class="material-icons text-sm">settings</span>
-    </div>
+  <div
+    class="flex flex-col items-center justify-center w-16 h-16 rounded-full"
+    (click)="navigateTo('settings')"
+    [ngClass]="{ 'bg-accent-300 rounded-full': activeTab() === 'settings' }"
+  >
+    <span class="material-icons text-sm">settings</span>
     <span class="text-xs">Settings</span>
   </div>
 </nav>
-
