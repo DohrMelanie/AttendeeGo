@@ -15,7 +15,6 @@ interface Activity {
   standalone: true,
   imports: [NavbarFestivalComponent],
   templateUrl: './notifications.component.html',
-  styleUrl: './notifications.component.css',
 })
 export class NotificationsComponent {
   location = inject(Location);
