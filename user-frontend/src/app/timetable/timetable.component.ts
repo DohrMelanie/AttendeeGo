@@ -16,7 +16,7 @@ export class TimetableComponent {
   protected router = inject(Router);
   constructor(private timetableService: TimetableService) {}
 
-  stages = signal<string[]>(['Stage 1', "Lil C's terminal", 'Stage 3']);
+  stages = signal<string[]>(['Stage 1', "Lil C's terminal"]);
 
   days: Day[] = [
     { id: 'tag-1', month: 'Mai', day: '1', weekday: 'Do', active: false },
