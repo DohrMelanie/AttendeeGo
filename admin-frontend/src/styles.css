@@ -1,8 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@use '@angular/material' as mat;
 
-html, body { height: 100%; background-color: #051e1f }
+html, body { 
+  height: 100%; 
+  background-color: #051e1f;
+
+  color-scheme: light dark;
+ }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: #f4fcfd;}
 
 @layer base {
