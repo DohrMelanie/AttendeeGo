@@ -1,5 +1,5 @@
 <div class="timetable-container max-h-svh relative overflow-y-hidden flex flex-col">
-    <h2 class="text-center my-3 relative">Festival Timetable</h2>
+    <h2 class="text-center my-3 relative">Timetable</h2>
     
     <div class="flex p-2 rounded-lg space-x-2 justify-center relative">
         @for (day of days; track day.id) {
@@ -61,7 +61,7 @@
            style="grid-template-rows: repeat(288, 10px); pointer-events: none;">
             @for (stage of stages(); track stage) {
                 @for (act of getActs(stage); track act.name) {
-                    <div class="event bg-blue-200 border text-xs p-1"
+                    <div class="event bg-blue-200 border text-xs p-1 flex flex-col relative"
                         [style.gridColumn]="stages().indexOf(stage) + 2"
                         [style.gridRow]="getStartRow(act) + ' / span ' + getRowSpan(act)"
                         style="pointer-events: auto;">
@@ -72,6 +72,15 @@
                         {{ act.endTime.getHours() }}:
                         {{ act.endTime.getMinutes() <= 9 ? '0' + act.endTime.getMinutes() : act.endTime.getMinutes() }}
                         </small>
+                        @if(act.friends && act.friends.length > 0) {
+                            <div class="flex flex-row m-2 absolute align-baseline bottom-0">
+                                @for(friend of act.friends; track friend) {
+                                    <div class="flex align-baseline -ml-2">
+                                        <img [src]="friend" class="h-6 w-6 rounded-full object-cover" alt="Friend Image">
+                                    </div>
+                                }
+                            </div>
+                        }
                     </div>
                 }
             }
